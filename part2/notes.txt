@@ -1,0 +1,309 @@
+How to find the latency between cpu - l1,l2 and l3 caches!
+
+MLC
+
+Intel(R) Memory Latency Checker - v3.11a
+*** Unable to modify prefetchers (try executing 'modprobe msr')
+*** So, enabling random access for latency measurements
+Measuring idle latencies for random access (in ns)...
+		Numa node
+Numa node	     0	
+       0	 106.1	
+
+Measuring Peak Injection Memory Bandwidths for the system
+Bandwidths are in MB/sec (1 MB/sec = 1,000,000 Bytes/sec)
+Using all the threads from each core if Hyper-threading is enabled
+Using traffic with the following read-write ratios
+ALL Reads        :	16796.8	
+3:1 Reads-Writes :	13190.7	
+2:1 Reads-Writes :	12272.0	
+1:1 Reads-Writes :	11699.9	
+Stream-triad like:	14033.9	
+
+Measuring Memory Bandwidths between nodes within system 
+Bandwidths are in MB/sec (1 MB/sec = 1,000,000 Bytes/sec)
+Using all the threads from each core if Hyper-threading is enabled
+Using Read-only traffic type
+		Numa node
+Numa node	     0	
+       0	17631.3	
+
+Measuring Loaded Latencies for the system
+Using all the threads from each core if Hyper-threading is enabled
+Using Read-only traffic type
+Inject	Latency	Bandwidth
+Delay	(ns)	MB/sec
+==========================
+ 00000	515.71	  17181.3
+ 00002	486.37	  17796.5
+ 00008	485.14	  17859.3
+ 00015	487.92	  17856.0
+ 00050	423.65	  17764.3
+ 00100	371.55	  18033.0
+ 00200	196.24	  16436.1
+ 00300	131.91	  12859.5
+ 00400	123.98	  10150.9
+ 00500	125.13	   8356.7
+ 00700	110.98	   6489.8
+ 01000	108.82	   4789.8
+ 01300	105.87	   3915.8
+ 01700	104.72	   3176.2
+ 02500	105.22	   2330.8
+ 03500	102.77	   1887.4
+ 05000	101.70	   1518.7
+ 09000	101.45	   1126.5
+ 20000	100.91	    856.0
+
+Measuring cache-to-cache transfer latency (in ns)...
+Local Socket L2->L2 HIT  latency	30.6
+Local Socket L2->L2 HITM latency	30.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+What about other cache stats like l1, l2 and l3 sizes.
+
+major observation - l2 is 27 times bigger than l1 and l3 and l2 are of similar sizes
+
+l3 latency around twice that of l2 latency
+l1 latency is negligible compared to l2 and l3
+
+
+# dmidecode 3.3
+Getting SMBIOS data from sysfs.
+SMBIOS 3.2 present.
+
+Handle 0x0700, DMI type 7, 27 bytes
+Cache Information
+	Socket Designation: L1 Cache
+	Configuration: Enabled, Not Socketed, Level 1
+	Operational Mode: Write Back
+	Location: Internal
+	Installed Size: 192 kB
+	Maximum Size: 192 kB
+	Supported SRAM Types:
+		Synchronous
+	Installed SRAM Type: Synchronous
+	Speed: Unknown
+	Error Correction Type: Parity
+	System Type: Data
+	Associativity: 12-way Set-associative
+
+Handle 0x0701, DMI type 7, 27 bytes
+Cache Information
+	Socket Designation: L1 Cache
+	Configuration: Enabled, Not Socketed, Level 1
+	Operational Mode: Write Back
+	Location: Internal
+	Installed Size: 128 kB
+	Maximum Size: 128 kB
+	Supported SRAM Types:
+		Synchronous
+	Installed SRAM Type: Synchronous
+	Speed: Unknown
+	Error Correction Type: Parity
+	System Type: Instruction
+	Associativity: 8-way Set-associative
+
+Handle 0x0702, DMI type 7, 27 bytes
+Cache Information
+	Socket Designation: L2 Cache
+	Configuration: Enabled, Not Socketed, Level 2
+	Operational Mode: Write Back
+	Location: Internal
+	Installed Size: 5 MB
+	Maximum Size: 5 MB
+	Supported SRAM Types:
+		Synchronous
+	Installed SRAM Type: Synchronous
+	Speed: Unknown
+	Error Correction Type: Single-bit ECC
+	System Type: Unified
+	Associativity: Other
+
+Handle 0x0703, DMI type 7, 27 bytes
+Cache Information
+	Socket Designation: L3 Cache
+	Configuration: Enabled, Not Socketed, Level 3
+	Operational Mode: Write Back
+	Location: Internal
+	Installed Size: 8 MB
+	Maximum Size: 8 MB
+	Supported SRAM Types:
+		Synchronous
+	Installed SRAM Type: Synchronous
+	Speed: Unknown
+	Error Correction Type: Multi-bit ECC
+	System Type: Unified
+	Associativity: 8-way Set-associative
+
+
+
+How to take into account context switches?
+
+
+What about layered tiling??
+
+
+
+Can we block context switches on a core?
+
+I mean is it even allowed to do that?
+
+
+
+
+K, dim, output_dim size assumptions 
+
+K << N 
+K << B
+N=c*B
+
+cache line size must divide B
+
+
+
+Tiling performance
+
+B = 512
+
+yashjonjale@yj:~/Documents/CS683/repo/pa1-chak-de-microarchitecture-advanced_architects/part2/build$ ./tiling 512 7
+Naive Convolution Time: 0.033357 seconds
+Tiled Convolution Time: 0.036081 seconds, Speedup: 0.924503x
+Matrix convolution is correct!
+yashjonjale@yj:~/Documents/CS683/repo/pa1-chak-de-microarchitecture-advanced_architects/part2/build$ ./tiling 1024 7
+Naive Convolution Time: 0.134833 seconds
+Tiled Convolution Time: 0.137261 seconds, Speedup: 0.982311x
+Matrix convolution is correct!
+yashjonjale@yj:~/Documents/CS683/repo/pa1-chak-de-microarchitecture-advanced_architects/part2/build$ ./tiling 2048 7
+Naive Convolution Time: 0.567250 seconds
+Tiled Convolution Time: 0.570534 seconds, Speedup: 0.994244x
+Matrix convolution is correct!
+yashjonjale@yj:~/Documents/CS683/repo/pa1-chak-de-microarchitecture-advanced_architects/part2/build$ ./tiling 8192 7
+Naive Convolution Time: 8.788104 seconds
+Tiled Convolution Time: 9.632295 seconds, Speedup: 0.912358x
+Matrix convolution is correct!
+yashjonjale@yj:~/Documents/CS683/repo/pa1-chak-de-microarchitecture-advanced_architects/part2/build$ ./tiling 2048 19
+Naive Convolution Time: 4.487389 seconds
+Tiled Convolution Time: 4.112070 seconds, Speedup: 1.091273x
+Matrix convolution is correct!
+
+
+
+
+yashjonjale@yj:~/Documents/CS683/repo/pa1-chak-de-microarchitecture-advanced_architects/part2$ ./build/tiling 2048 19
+Naive Convolution Time: 4.376260 seconds
+Tiled Convolution Time: 4.484773 seconds, Speedup: 0.975804x
+Matrix convolution is correct!
+
+
+
+
+
+
+
+
+
+B = 128
+
+yashjonjale@yj:~/Documents/CS683/repo/pa1-chak-de-microarchitecture-advanced_architects/part2$ ./build/tiling 2048 7
+Naive Convolution Time: 0.538132 seconds
+Tiled Convolution Time: 0.535362 seconds, Speedup: 1.005174x
+Matrix convolution is correct!
+yashjonjale@yj:~/Documents/CS683/repo/pa1-chak-de-microarchitecture-advanced_architects/part2$ ./build/tiling 4096 7
+Naive Convolution Time: 2.139043 seconds
+Tiled Convolution Time: 2.144337 seconds, Speedup: 0.997531x
+Matrix convolution is correct!
+yashjonjale@yj:~/Documents/CS683/repo/pa1-chak-de-microarchitecture-advanced_architects/part2$ ./build/tiling 8192 7
+Naive Convolution Time: 8.874856 seconds
+Tiled Convolution Time: 8.945024 seconds, Speedup: 0.992156x
+Matrix convolution is correct!
+
+yashjonjale@yj:~/Documents/CS683/repo/pa1-chak-de-microarchitecture-advanced_architects/part2$ ./build/tiling 2048 7
+Naive Convolution Time: 0.538132 seconds
+Tiled Convolution Time: 0.535362 seconds, Speedup: 1.005174x
+Matrix convolution is correct!
+yashjonjale@yj:~/Documents/CS683/repo/pa1-chak-de-microarchitecture-advanced_architects/part2$ ./build/tiling 4096 7
+Naive Convolution Time: 2.139043 seconds
+Tiled Convolution Time: 2.144337 seconds, Speedup: 0.997531x
+Matrix convolution is correct!
+yashjonjale@yj:~/Documents/CS683/repo/pa1-chak-de-microarchitecture-advanced_architects/part2$ ./build/tiling 8192 7
+Naive Convolution Time: 8.874856 seconds
+Tiled Convolution Time: 8.945024 seconds, Speedup: 0.992156x
+Matrix convolution is correct!
+yashjonjale@yj:~/Documents/CS683/repo/pa1-chak-de-microarchitecture-advanced_architects/part2$ ./build/tiling 2048 19
+Naive Convolution Time: 4.205467 seconds
+Tiled Convolution Time: 4.457669 seconds, Speedup: 0.943423x
+Matrix convolution is correct!
+yashjonjale@yj:~/Documents/CS683/repo/pa1-chak-de-microarchitecture-advanced_architects/part2$ ./build/tiling 2048 29
+Naive Convolution Time: 9.291696 seconds
+Tiled Convolution Time: 9.406564 seconds, Speedup: 0.987789x
+Matrix convolution is correct!
+yashjonjale@yj:~/Documents/CS683/repo/pa1-chak-de-microarchitecture-advanced_architects/part2$ ./build/tiling 2048 51
+Naive Convolution Time: 27.521810 seconds
+Tiled Convolution Time: 27.064243 seconds, Speedup: 1.016907x
+Matrix convolution is correct!
+yashjonjale@yj:~/Documents/CS683/repo/pa1-chak-de-microarchitecture-advanced_architects/part2$ ./build/tiling 2048 101
+^C
+yashjonjale@yj:~/Documents/CS683/repo/pa1-chak-de-microarchitecture-advanced_architects/part2$ ./build/tiling 512 101
+Naive Convolution Time: 4.350499 seconds
+Tiled Convolution Time: 4.372147 seconds, Speedup: 0.995049x
+Matrix convolution is correct!
+yashjonjale@yj:~/Documents/CS683/repo/pa1-chak-de-microarchitecture-advanced_architects/part2$ ./build/tiling 1024 101
+Naive Convolution Time: 21.946237 seconds
+Tiled Convolution Time: 22.032281 seconds, Speedup: 0.996095x
+Matrix convolution is correct!
+yashjonjale@yj:~/Documents/CS683/repo/pa1-chak-de-microarchitecture-advanced_architects/part2$ ./build/tiling 2048 67
+Naive Convolution Time: 47.846893 seconds
+Tiled Convolution Time: 48.058775 seconds, Speedup: 0.995591x
+Matrix convolution is correct!
+
+B = 
+
+
+
+
+
+
+
+
+
+SIMD Load Instructions
+SIMD load instructions read multiple data elements from memory into a SIMD register. There are different types of SIMD load instructions based on whether the data being loaded is aligned or unaligned.
+
+Aligned SIMD Load
+Instruction Example: _mm512_load_pd for AVX-512 (aligned load of double-precision floats).
+Memory Requirement: The address from which data is loaded must be aligned to the size of the SIMD register. For a 512-bit load (64 bytes), the starting address must be a multiple of 64.
+Performance: Aligned loads are generally faster because they can be performed in a single memory access cycle. The CPU memory subsystem is optimized for aligned memory access, which allows it to fetch the data more efficiently.
+Use Case: Aligned loads are preferred when you know that the data is stored in memory with the proper alignment. For example, when processing large, contiguous arrays where alignment can be controlled, or when memory has been explicitly allocated with an alignment requirement using platform-specific functions (e.g., posix_memalign on Linux).
+
+
+
+
+https://stackoverflow.com/questions/7327994/prefetching-examples
+soft prefetching on transpose
+
+
+
+https://www.cs.ucr.edu/~nael/217-f15/lectures/217-lec8.pdf
+
+
+
+https://stackoverflow.com/questions/72243997/how-to-use-software-prefetch-systematically
+
+
+l1 is thrashing for some reason during software prefetching, but prefetching only till l2 is fine

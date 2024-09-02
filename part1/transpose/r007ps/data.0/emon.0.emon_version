@@ -1,0 +1,83 @@
+EMON Version .............. V11.48 Beta 
+Copyright(C) 1993 Intel Corporation. All rights reserved.
+Application Build Date: Jul 29 2024 at 12:31:30
+SEP Driver Version: 5.48 Beta (public)
+PAX Driver Version: 1.0
+Virtualization platform: Host VM on Hyper-V with VBS enabled
+total_number_of_processors  ...... 8
+number_of_online_processors ...... 8
+cpu_family ................ Intel(R) microarchitecture code named Icelake
+cpu_model ................. 126 (0x7e)
+cpu_stepping .............. 5 (0x5)
+
+Cache Info (core):
+L1 Data Cache ............. 48KB, 12-way, 64-byte line size
+                            8 HW threads share this cache, No SW Init Required
+L1 Code Cache ............. 32KB, 8-way, 64-byte line size
+                            8 HW threads share this cache, No SW Init Required
+L2 Unified Cache .......... 512KB, 8-way, 64-byte line size
+                            8 HW threads share this cache, No SW Init Required
+L3 Unified Cache .......... 6MB, 12-way, 64-byte line size
+                            No SW Init Required
+64-byte Prefetching
+
+Device Type ............... Intel(R) microarchitecture code named Icelake
+EMON Database ............. icelake
+Platform type ............. 123
+
+System Features:
+    (Number of Packages:    1)
+    (Cores Per Package:    4)
+    (Threads Per Package:  8)
+
+Processor Features (core):
+number_of_selectors ....... 8
+number_of_var_counters .... 8
+number_of_fixed_ctrs....... 4
+Fixed Counter Events:
+counter 0 ................. INST_RETIRED.ANY
+counter 1 ................. CPU_CLK_UNHALTED.THREAD
+counter 2 ................. CPU_CLK_UNHALTED.REF_TSC
+counter 3 ................. TOPDOWN.SLOTS
+number of devices ......... 1
+number_of_events .......... 339
+    (Thermal Throttling) (Enabled)
+    (Hyper-Threading) (Enabled)
+    (DCU IP Prefetching) (Enabled)
+    (DCU Streamer Prefetching) (Enabled)
+    (MLC Spatial Prefetching) (Enabled)
+    (MLC Streamer Prefetching) (Enabled)
+    (Threads Per Core:      2)
+
+Uncore Performance Monitoring Units:
+    cbo             : 4
+    imc             : 1
+    ncu             : 1
+    gt              : 1
+
+GPU Information:
+    No GPU devices found
+
+RAM Features:
+    (Package/Memory Controller/Channel)
+	(0/0/0) (Total Number of Ranks on this Channel: 1)
+		 (Dimm0 Info: Capacity = 8 GB, Data Width = 64, Form Factor = SODIMM, Memory Type = DDR4, Memory Type Detail = Synchronous, Speed = 2667MHz, Configured Speed = 2667MHz)
+	(0/0/1) (Total Number of Ranks on this Channel: 1)
+		 (Dimm0 Info: Empty)
+
+TSC Freq .................. 1190.40 MHz
+
+NUMA node(s):		  0
+
+		   OS Processor <-> Physical/Logical Mapping
+		   -----------------------------------------
+	  OS Processor	  Phys. Package	      Core	Logical Processor	Core Type
+		0		0		0		0		core		
+		1		0		0		1		core		
+		2		0		1		0		core		
+		3		0		1		1		core		
+		4		0		2		0		core		
+		5		0		2		1		core		
+		6		0		3		0		core		
+		7		0		3		1		core		
+		   -----------------------------------------

@@ -1,0 +1,187 @@
+182 [7208] INFO perfrun.launcher <> - Launcher main begin
+197 [7208] INFO perfrun.launcher <> - MessageCatalogInit finished
+197 [7208] INFO perfrun.launcher <> - Launcher instance created
+197 [7208] INFO perfrun.launcher <> - argc = 7; cmdline = C:\Program Files (x86)\Intel\oneAPI\vtune\2024.2\bin64\amplxe-runss.exe --ui-output-format xml --ui-output-fd 1224 --option-file C:\CS683\PA_Assignemnt1\pa1-chak-de-microarchitecture-advanced_architects\part1\transpose\r007ps\config\runsa.options 
+232 [7208] INFO perfrun.launcher <> - New signal handler callback was added
+305 [7208] INFO perfrun.perfcollector <> - SEP tool path: C:\Program Files (x86)\Intel\oneAPI\vtune\2024.2\bin64\sep.exe
+326 [7208] INFO perfrun.launcher <> - create msngr2::ICliToolContext
+326 [7208] INFO perfrun.launcher <> - create file finder object
+326 [7208] INFO perfrun.launcher <> - create a result directory: pattern = C:\CS683\PA_Assignemnt1\pa1-chak-de-microarchitecture-advanced_architects\part1\transpose\r007ps pid = 4294967295
+332 [7208] INFO perfrun.launcher <> - create data directory = C:\CS683\PA_Assignemnt1\pa1-chak-de-microarchitecture-advanced_architects\part1\transpose\r007ps\data.0
+333 [7208] INFO perfrun.launcher <> - Creating the master collection flag
+344 [7208] INFO perfrun.launcher <> - Done creating the master collection flag
+344 [5848] INFO perfrun.launcher <> - plugin [remoteplug] was disabled because it doesn't support the given collection type.
+344 [5848] INFO perfrun.sdk <> - Allocating TMU :C:\CS683\PA_Assignemnt1\pa1-chak-de-microarchitecture-advanced_architects\part1\transpose\r007ps\data.0\systemcollector-20704-LAPTOP-9PGAITT6.sc
+345 [5848] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+346 [5848] INFO perfrun.launcher <> - plugin [itt] was disabled because it doesn't support the given collection type.
+346 [5848] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+369 [5848] INFO perfrun.launcher <> - plugin [etw.kernel] was disabled because it doesn't support the given collection type.
+370 [5848] INFO perfrun.launcher <> - plugin [etw.dx] was disabled because it doesn't support the given collection type.
+370 [5848] INFO perfrun.launcher <> - plugin [etw.wsa] was disabled because it doesn't support the given collection type.
+370 [5848] INFO perfrun.mrte <> - system-wide mode is 0
+370 [5848] INFO perfrun.mrte <> - Getting  mrte profiling environment ...
+411 [5848] INFO perfrun.mrte <> - INTEL_MRTE_DATA_DIR=C:\CS683\PA_Assignemnt1\pa1-chak-de-microarchitecture-advanced_architects\part1\transpose\r007ps\data.0
+411 [5848] INFO perfrun.mrte <> - INTEL_MRTE_HOST_NAME=LAPTOP-9PGAITT6
+411 [5848] INFO perfrun.mrte <> - JAVA_TOOL_OPTIONS=-agentlib:amplxe_samplingmrte_javaprof_1.0
+411 [5848] INFO perfrun.mrte <> - PATH=C:\Program Files (x86)\Intel\oneAPI\vtune\2024.2\bin32\runtime;C:\Program Files (x86)\Intel\oneAPI\vtune\2024.2\bin64\runtime;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\iverilog\bin;C:\DLDCA\iverilog\bin;C:\MinGW\bin;C:\Users\Admin\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\Admin\AppData\Local\Programs\Python\Python39\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Admin\AppData\Local\Microsoft\WindowsApps;C:\Users\Admin\AppData\Local\Programs\Python\Python38-32\Scripts;C:\Users\Admin\AppData\Local\Programs\Python\Python38-32;C:\Users\Admin\AppData\Local\Programs\Microsoft VS Code\bin;C:\DLDCA\iverilog\gtkwave\bin
+411 [5848] INFO perfrun.mrte <> - COR_ENABLE_PROFILING=1
+411 [5848] INFO perfrun.mrte <> - COR_PROFILER={AA5E4821-E3B1-479c-B7FF-5AD047D22CED}
+411 [5848] INFO perfrun.mrte <> - COMPLUS_ProfAPI_ProfilerCompatibilitySetting=EnableV2Profiler
+411 [5848] INFO perfrun.mrte <> - CORECLR_ENABLE_PROFILING=1
+411 [5848] INFO perfrun.mrte <> - CORECLR_PROFILER={AA5E4821-E3B1-479c-B7FF-5AD047D22CED}
+411 [5848] INFO perfrun.mrte <> - CORECLR_PROFILER_PATH=C:\Program Files (x86)\Intel\oneAPI\vtune\2024.2\bin64/amplxe_samplingmrte_clrprof_1.0.dll
+411 [5848] INFO perfrun.mrte <> - INTEL_MRTE_PROFILER_MODE=mixed
+411 [5848] INFO perfrun.mrte <> - Data directory: C:\CS683\PA_Assignemnt1\pa1-chak-de-microarchitecture-advanced_architects\part1\transpose\r007ps\data.0
+411 [5848] INFO perfrun.mrte <> - Mrte plugin is initialized
+412 [5848] INFO perfrun.launcher <> - plugin [cuscol] was disabled because it doesn't support the given collection type.
+412 [5848] INFO perfrun.launcher <> - plugin [stdsrc] was disabled because it doesn't support the given collection type.
+412 [5848] INFO perfrun.launcher <> - plugin [sep] was disabled because it doesn't support the given collection type.
+412 [5848] INFO perfrun.launcher <> - plugin [vtsspp] was disabled because it doesn't support the given collection type.
+412 [5848] INFO perfrun.launcher <> - plugin [perf] was disabled because it doesn't support the given collection type.
+412 [5848] INFO perfrun.launcher <> - plugin [aoclprofile] was disabled because it doesn't support the given collection type.
+412 [5848] INFO perfrun.tpss <> - initialize tpss controller
+412 [5848] INFO perfrun.launcher <> - plugin [tpss] was disabled because it doesn't support the given collection type.
+412 [5848] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+412 [5848] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+412 [5848] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+412 [5848] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+412 [5848] INFO perfrun.launcher <> - plugin [power] was disabled because it doesn't support the given collection type.
+412 [5848] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+412 [5848] INFO perfrun.launcher <> - plugin [ipmwatch] was disabled because it doesn't support the given collection type.
+412 [5848] INFO perfrun.launcher <> - plugin [os_counters] was disabled because it doesn't support the given collection type.
+412 [5848] INFO perfrun.launcher <> - plugin [l0_metrics] was disabled because it doesn't support the given collection type.
+413 [7208] INFO perfrun.launcher <> - set environment variable: INTEL_MRTE_DATA_DIR = C:\CS683\PA_Assignemnt1\pa1-chak-de-microarchitecture-advanced_architects\part1\transpose\r007ps\data.0
+413 [7208] INFO perfrun.launcher <> - set environment variable: INTEL_MRTE_HOST_NAME = LAPTOP-9PGAITT6
+413 [7208] INFO perfrun.launcher <> - set environment variable: JAVA_TOOL_OPTIONS = -agentlib:amplxe_samplingmrte_javaprof_1.0
+413 [7208] INFO perfrun.launcher <> - set environment variable: PATH = C:\Program Files (x86)\Intel\oneAPI\vtune\2024.2\bin32\runtime;C:\Program Files (x86)\Intel\oneAPI\vtune\2024.2\bin64\runtime;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\iverilog\bin;C:\DLDCA\iverilog\bin;C:\MinGW\bin;C:\Users\Admin\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\Admin\AppData\Local\Programs\Python\Python39\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Admin\AppData\Local\Microsoft\WindowsApps;C:\Users\Admin\AppData\Local\Programs\Python\Python38-32\Scripts;C:\Users\Admin\AppData\Local\Programs\Python\Python38-32;C:\Users\Admin\AppData\Local\Programs\Microsoft VS Code\bin;C:\DLDCA\iverilog\gtkwave\bin
+414 [7208] INFO perfrun.launcher <> - set environment variable: COR_ENABLE_PROFILING = 1
+414 [7208] INFO perfrun.launcher <> - set environment variable: COR_PROFILER = {AA5E4821-E3B1-479c-B7FF-5AD047D22CED}
+414 [7208] INFO perfrun.launcher <> - set environment variable: COMPLUS_ProfAPI_ProfilerCompatibilitySetting = EnableV2Profiler
+414 [7208] INFO perfrun.launcher <> - set environment variable: CORECLR_ENABLE_PROFILING = 1
+415 [7208] INFO perfrun.launcher <> - set environment variable: CORECLR_PROFILER = {AA5E4821-E3B1-479c-B7FF-5AD047D22CED}
+415 [7208] INFO perfrun.launcher <> - set environment variable: CORECLR_PROFILER_PATH = C:\Program Files (x86)\Intel\oneAPI\vtune\2024.2\bin64/amplxe_samplingmrte_clrprof_1.0.dll
+415 [7208] INFO perfrun.launcher <> - set environment variable: INTEL_MRTE_PROFILER_MODE = mixed
+416 [7208] INFO perfrun.launcher <> - RpcServer: run RPC server to handle requests
+491 [7208] INFO perfrun.sdk <> - IProcessUtil: the given executable 'C:\CS683\PA_Assignemnt1\pa1-chak-de-microarchitecture-advanced_architects\part1\a.exe' is valid.
+491 [7208] INFO perfrun.launcher <> - Launcher: command line to start before modification = C:\CS683\PA_Assignemnt1\pa1-chak-de-microarchitecture-advanced_architects\part1\a.exe 1024 100
+491 [7208] INFO perfrun.launcher <> - Launcher: command line to start after modification = C:\CS683\PA_Assignemnt1\pa1-chak-de-microarchitecture-advanced_architects\part1\a.exe 1024 100
+491 [7208] INFO perfrun.launcher <> - ProcessCreator object was created
+497 [7208] INFO perfrun.launcher <> - Launcher: the process was started in suspend mode
+498 [5848] INFO perfrun.launcher <> - Messenger::say: Peak bandwidth measurement started.
+4305 [5848] INFO perfrun.launcher <> - Messenger::say: Peak bandwidth measurement finished.
+4313 [5848] INFO perfrun.sdk <> - Allocating TMU :C:\CS683\PA_Assignemnt1\pa1-chak-de-microarchitecture-advanced_architects\part1\transpose\r007ps\data.0\gen_metrics0.0.2.0.0.oa.0.cfg
+4314 [5848] INFO perfrun.sdk <> - De-allocating TMU: C:\CS683\PA_Assignemnt1\pa1-chak-de-microarchitecture-advanced_architects\part1\transpose\r007ps\data.0\gen_metrics0.0.2.0.0.oa.0.cfg
+4335 [5848] INFO perfrun.gpu <> - GPU counting mode: initialization successful
+4342 [19976] INFO perfrun.sdk <> - Allocating TMU :C:\CS683\PA_Assignemnt1\pa1-chak-de-microarchitecture-advanced_architects\part1\transpose\r007ps\data.0\gen_metrics0.0.2.0.0.oa.0.vtss
+4343 [19976] INFO perfrun.gpu <> - Open stream for subdevice 0
+4344 [5848] INFO perfrun.sdk <> - runCmd: "C:\Program Files (x86)\Intel\oneAPI\vtune\2024.2\bin64\emon.exe" -M
+4353 [5848] INFO perfrun.sdk <> - runCmd started PID 7268
+4566 [5848] INFO perfrun.sdk <> - runCmd: "C:\Program Files (x86)\Intel\oneAPI\vtune\2024.2\bin64\emon.exe" -v
+4573 [5848] INFO perfrun.sdk <> - runCmd started PID 1440
+4807 [5848] INFO perfrun.sdk <> - runCmd: "C:\Program Files (x86)\Intel\oneAPI\vtune\2024.2\bin64\sep.exe" -dry-run -ec CPU_CLK_UNHALTED.THREAD:sa=1000000,CPU_CLK_UNHALTED.REF_TSC:sample:sa=1000000,INST_RETIRED.ANY:sample:sa=1000000,CPU_CLK_UNHALTED.DISTRIBUTED:sa=1000000,TOPDOWN.SLOTS:sample:sa=2000003,UOPS_RETIRED.SLOTS:sample:sa=2000003,FP_ARITH_INST_RETIRED.SCALAR_SINGLE:sa=2000003,FP_ARITH_INST_RETIRED.128B_PACKED_SINGLE:sa=2000003,FP_ARITH_INST_RETIRED.256B_PACKED_SINGLE:sa=2000003,FP_ARITH_INST_RETIRED.SCALAR_DOUBLE:sa=2000003,FP_ARITH_INST_RETIRED.128B_PACKED_DOUBLE:sa=2000003,FP_ARITH_INST_RETIRED.256B_PACKED_DOUBLE:sa=2000003,UOPS_EXECUTED.X87:sa=2000003,UOPS_EXECUTED.THREAD:sa=2000003,FP_ARITH_INST_RETIRED.512B_PACKED_DOUBLE:sa=2000003,FP_ARITH_INST_RETIRED.512B_PACKED_SINGLE:sa=2000003,CPU_CLK_UNHALTED.THREAD_P,CYCLE_ACTIVITY.STALLS_MEM_ANY,CYCLE_ACTIVITY.STALLS_TOTAL,EXE_ACTIVITY.1_PORTS_UTIL,EXE_ACTIVITY.2_PORTS_UTIL,EXE_ACTIVITY.BOUND_ON_STORES,FRONTEND_RETIRED.LATENCY_GE_4,IDQ_UOPS_NOT_DELIVERED.CORE,INT_MISC.RECOVERY_CYCLES:cmask=1:e=yes,INT_MISC.UOP_DROPPING,TOPDOWN.BACKEND_BOUND_SLOTS,CYCLE_ACTIVITY.STALLS_L1D_MISS,CYCLE_ACTIVITY.STALLS_L2_MISS,CYCLE_ACTIVITY.STALLS_L3_MISS,L1D_PEND_MISS.FB_FULL_PERIODS,MEM_LOAD_RETIRED.FB_HIT,MEM_LOAD_RETIRED.L1_HIT,MEM_LOAD_RETIRED.L1_MISS,MEM_LOAD_RETIRED.L2_HIT,MEM_LOAD_RETIRED.L3_HIT,MEM_LOAD_RETIRED.L3_MISS,OFFCORE_REQUESTS_OUTSTANDING.ALL_DATA_RD:cmask=4,OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DATA_RD,MEM_INST_RETIRED.ALL_STORES:sa=100003,MEM_INST_RETIRED.ALL_LOADS:sa=100003,CYCLE_ACTIVITY.CYCLES_L1D_MISS,CYCLE_ACTIVITY.CYCLES_MEM_ANY,DTLB_LOAD_MISSES.STLB_HIT:cmask=1,DTLB_LOAD_MISSES.WALK_ACTIVE,DTLB_STORE_MISSES.STLB_HIT:cmask=1,DTLB_STORE_MISSES.WALK_ACTIVE,L1D_PEND_MISS.FB_FULL,L1D_PEND_MISS.L2_STALL,L1D_PEND_MISS.PENDING,L2_RQSTS.ALL_RFO,L2_RQSTS.RFO_HIT,LD_BLOCKS.NO_SR,LD_BLOCKS.STORE_FORWARD,LD_BLOCKS_PARTIAL.ADDRESS_ALIAS,MEM_INST_RETIRED.LOCK_LOADS,MEM_INST_RETIRED.SPLIT_LOADS,MEM_INST_RETIRED.SPLIT_STORES,MEM_INST_RETIRED.STLB_MISS_LOADS,MEM_INST_RETIRED.STLB_MISS_STORES,MEM_LOAD_L3_HIT_RETIRED.XSNP_HIT,MEM_LOAD_L3_HIT_RETIRED.XSNP_HITM,MEM_LOAD_L3_HIT_RETIRED.XSNP_MISS,OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DEMAND_RFO,UNC_IMC_DRAM_DATA_READS,UNC_IMC_DRAM_DATA_WRITES -experimental
+4812 [5848] INFO perfrun.sdk <> - runCmd started PID 16524
+4855 [19976] INFO perfrun.gpu <> - Next report we'll be handling the low-power state
+4855 [19976] INFO perfrun.gpu <> - Entered handling of low-power state
+4855 [19976] INFO perfrun.gpu <> - Exited handling of low-power state
+4855 [19976] INFO perfrun.gpu <> - Next report we'll be handling the low-power state
+4855 [19976] INFO perfrun.gpu <> - Entered handling of low-power state
+4855 [19976] INFO perfrun.gpu <> - Exited handling of low-power state
+4855 [19976] INFO perfrun.gpu <> - Next report we'll be handling the low-power state
+4855 [19976] INFO perfrun.gpu <> - Entered handling of low-power state
+5100 [5848] INFO perfrun.sdk <> - runCmd: "C:\Program Files (x86)\Intel\oneAPI\vtune\2024.2\bin64\emon.exe" -u -t 0.010 -l0 -A -C CPU_CLK_UNHALTED.DISTRIBUTED,CPU_CLK_UNHALTED.REF_TSC,CPU_CLK_UNHALTED.THREAD,CPU_CLK_UNHALTED.THREAD_P,CYCLE_ACTIVITY.CYCLES_L1D_MISS,CYCLE_ACTIVITY.CYCLES_MEM_ANY,CYCLE_ACTIVITY.STALLS_L1D_MISS,CYCLE_ACTIVITY.STALLS_L2_MISS,CYCLE_ACTIVITY.STALLS_L3_MISS,CYCLE_ACTIVITY.STALLS_MEM_ANY,CYCLE_ACTIVITY.STALLS_TOTAL,DTLB_LOAD_MISSES.STLB_HIT:c1,DTLB_LOAD_MISSES.WALK_ACTIVE,DTLB_STORE_MISSES.STLB_HIT:c1,DTLB_STORE_MISSES.WALK_ACTIVE,EXE_ACTIVITY.1_PORTS_UTIL,EXE_ACTIVITY.2_PORTS_UTIL,EXE_ACTIVITY.BOUND_ON_STORES,FP_ARITH_INST_RETIRED.128B_PACKED_DOUBLE,FP_ARITH_INST_RETIRED.128B_PACKED_SINGLE,FP_ARITH_INST_RETIRED.256B_PACKED_DOUBLE,FP_ARITH_INST_RETIRED.256B_PACKED_SINGLE,FP_ARITH_INST_RETIRED.512B_PACKED_DOUBLE,FP_ARITH_INST_RETIRED.512B_PACKED_SINGLE,FP_ARITH_INST_RETIRED.SCALAR_DOUBLE,FP_ARITH_INST_RETIRED.SCALAR_SINGLE,FRONTEND_RETIRED.LATENCY_GE_4,IDQ_UOPS_NOT_DELIVERED.CORE,INST_RETIRED.ANY,INT_MISC.RECOVERY_CYCLES:c1:e1,INT_MISC.UOP_DROPPING,L1D_PEND_MISS.FB_FULL,L1D_PEND_MISS.FB_FULL_PERIODS,L1D_PEND_MISS.L2_STALL,L1D_PEND_MISS.PENDING,L2_RQSTS.ALL_RFO,L2_RQSTS.RFO_HIT,LD_BLOCKS.NO_SR,LD_BLOCKS.STORE_FORWARD,LD_BLOCKS_PARTIAL.ADDRESS_ALIAS,MEM_INST_RETIRED.ALL_LOADS,MEM_INST_RETIRED.ALL_STORES,MEM_INST_RETIRED.LOCK_LOADS,MEM_INST_RETIRED.SPLIT_LOADS,MEM_INST_RETIRED.SPLIT_STORES,MEM_INST_RETIRED.STLB_MISS_LOADS,MEM_INST_RETIRED.STLB_MISS_STORES,MEM_LOAD_L3_HIT_RETIRED.XSNP_HIT,MEM_LOAD_L3_HIT_RETIRED.XSNP_HITM,MEM_LOAD_L3_HIT_RETIRED.XSNP_MISS,MEM_LOAD_RETIRED.FB_HIT,MEM_LOAD_RETIRED.L1_HIT,MEM_LOAD_RETIRED.L1_MISS,MEM_LOAD_RETIRED.L2_HIT,MEM_LOAD_RETIRED.L3_HIT,MEM_LOAD_RETIRED.L3_MISS,OFFCORE_REQUESTS_OUTSTANDING.ALL_DATA_RD:c4,OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DATA_RD,OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DEMAND_RFO,TOPDOWN.BACKEND_BOUND_SLOTS,TOPDOWN.SLOTS,UNC_IMC_DRAM_DATA_READS,UNC_IMC_DRAM_DATA_WRITES,UOPS_EXECUTED.THREAD,UOPS_EXECUTED.X87,UOPS_RETIRED.SLOTS -f C:\CS683\PA_Assignemnt1\pa1-chak-de-microarchitecture-advanced_architects\part1\transpose\r007ps\data.0\emon.0.emon -experimental
+5109 [5848] INFO perfrun.sdk <> - runCmd started PID 21200
+5109 [5848] INFO perfrun.emon <> - Waiting trace file creation: C:\CS683\PA_Assignemnt1\pa1-chak-de-microarchitecture-advanced_architects\part1\transpose\r007ps\data.0\emon.0.emon
+5363 [19976] INFO perfrun.gpu <> - Exited handling of low-power state
+5363 [19976] INFO perfrun.gpu <> - Next report we'll be handling the low-power state
+5363 [19976] INFO perfrun.gpu <> - Entered handling of low-power state
+5363 [19976] INFO perfrun.gpu <> - Exited handling of low-power state
+5363 [19976] INFO perfrun.gpu <> - Next report we'll be handling the low-power state
+5363 [19976] INFO perfrun.gpu <> - Entered handling of low-power state
+5363 [19976] INFO perfrun.gpu <> - Exited handling of low-power state
+5363 [19976] INFO perfrun.gpu <> - Next report we'll be handling the low-power state
+5363 [19976] INFO perfrun.gpu <> - Entered handling of low-power state
+5363 [19976] INFO perfrun.gpu <> - Exited handling of low-power state
+5363 [19976] INFO perfrun.gpu <> - Next report we'll be handling the low-power state
+5363 [19976] INFO perfrun.gpu <> - Entered handling of low-power state
+5526 [5848] INFO perfrun.emon <> - trace file was found
+5526 [7208] INFO perfrun.launcher <> - Launcher: all plugins were started
+5526 [7208] INFO perfrun.launcher <> - DirectoryMonitor object was created
+5526 [7208] INFO perfrun.launcher <> - DirectoryMonitor: a callback was added
+5526 [7208] INFO perfrun.launcher <> - DirectoryMonitor was started with pingTime = 1000
+5526 [7208] INFO perfrun.launcher <> - DeadlineTimer is going to be constructed
+5527 [7208] INFO perfrun.launcher <> - DeadlineTimer: a callback was added
+5543 [7208] INFO perfrun.launcher <> - Launcher: resume the profiled application and  wait its termination or stop command
+5632 [7208] INFO perfrun.launcher <> - Launcher: the profiled application was terminated  with exit code = 0
+5667 [5848] INFO perfrun.gpu <> - Waiting for data collection thread to finish
+5874 [19976] INFO perfrun.gpu <> - Exited handling of low-power state
+5874 [19976] INFO perfrun.gpu <> - Next report we'll be handling the low-power state
+5874 [19976] INFO perfrun.gpu <> - Entered handling of low-power state
+5874 [19976] INFO perfrun.gpu <> - Exited handling of low-power state
+5874 [19976] INFO perfrun.gpu <> - Next report we'll be handling the low-power state
+5875 [19976] INFO perfrun.gpu <> - Entered handling of low-power state
+5875 [19976] INFO perfrun.gpu <> - Exited handling of low-power state
+5875 [19976] INFO perfrun.gpu <> - Next report we'll be handling the low-power state
+5875 [19976] INFO perfrun.gpu <> - Entered handling of low-power state
+5875 [19976] INFO perfrun.gpu <> - Exited handling of low-power state
+5875 [19976] INFO perfrun.gpu <> - Next report we'll be handling the low-power state
+5875 [19976] INFO perfrun.gpu <> - Entered handling of low-power state
+5875 [19976] INFO perfrun.gpu <> - Exited handling of low-power state
+5875 [19976] INFO perfrun.gpu <> - Next report we'll be handling the low-power state
+5875 [19976] INFO perfrun.gpu <> - Entered handling of low-power state
+5875 [19976] INFO perfrun.gpu <> - Exited handling of low-power state
+5875 [19976] INFO perfrun.gpu <> - Next report we'll be handling the low-power state
+5875 [19976] INFO perfrun.gpu <> - Entered handling of low-power state
+5875 [19976] INFO perfrun.gpu <> - Exited handling of low-power state
+5875 [19976] INFO perfrun.gpu <> - Next report we'll be handling the low-power state
+5875 [19976] INFO perfrun.gpu <> - Entered handling of low-power state
+5875 [19976] INFO perfrun.gpu <> - Exited handling of low-power state
+5875 [19976] INFO perfrun.gpu <> - Next report we'll be handling the low-power state
+5875 [19976] INFO perfrun.gpu <> - Entered handling of low-power state
+5875 [19976] INFO perfrun.gpu <> - Exited handling of low-power state
+5875 [19976] INFO perfrun.gpu <> - Next report we'll be handling the low-power state
+5875 [19976] INFO perfrun.gpu <> - Entered handling of low-power state
+5875 [19976] INFO perfrun.gpu <> - Exited handling of low-power state
+5875 [19976] INFO perfrun.gpu <> - Next report we'll be handling the low-power state
+5875 [19976] INFO perfrun.gpu <> - Entered handling of low-power state
+5875 [19976] INFO perfrun.gpu <> - Exited handling of low-power state
+5875 [19976] INFO perfrun.gpu <> - Next report we'll be handling the low-power state
+5875 [19976] INFO perfrun.gpu <> - Entered handling of low-power state
+5875 [19976] INFO perfrun.gpu <> - Exited handling of low-power state
+5875 [19976] INFO perfrun.gpu <> - Next report we'll be handling the low-power state
+5875 [19976] INFO perfrun.gpu <> - Entered handling of low-power state
+5875 [19976] INFO perfrun.gpu <> - Exited handling of low-power state
+5875 [19976] INFO perfrun.gpu <> - Next report we'll be handling the low-power state
+5875 [19976] INFO perfrun.gpu <> - Entered handling of low-power state
+5875 [19976] INFO perfrun.gpu <> - Exited handling of low-power state
+5875 [19976] INFO perfrun.gpu <> - Next report we'll be handling the low-power state
+5875 [19976] INFO perfrun.gpu <> - Entered handling of low-power state
+5875 [19976] INFO perfrun.gpu <> - Exited handling of low-power state
+5875 [19976] INFO perfrun.gpu <> - Next report we'll be handling the low-power state
+5875 [19976] INFO perfrun.gpu <> - Entered handling of low-power state
+5875 [19976] INFO perfrun.gpu <> - Exited handling of low-power state
+5875 [19976] INFO perfrun.gpu <> - Next report we'll be handling the low-power state
+5875 [19976] INFO perfrun.gpu <> - Entered handling of low-power state
+5875 [19976] INFO perfrun.gpu <> - Exited handling of low-power state
+5875 [19976] INFO perfrun.gpu <> - Next report we'll be handling the low-power state
+5876 [19976] INFO perfrun.gpu <> - Entered handling of low-power state
+5876 [19976] INFO perfrun.gpu <> - Exited handling of low-power state
+5876 [19976] INFO perfrun.gpu <> - Next report we'll be handling the low-power state
+5876 [19976] INFO perfrun.gpu <> - Entered handling of low-power state
+5876 [19976] INFO perfrun.gpu <> - Writing dual vector buffer
+5879 [19976] INFO perfrun.sdk <> - De-allocating TMU: C:\CS683\PA_Assignemnt1\pa1-chak-de-microarchitecture-advanced_architects\part1\transpose\r007ps\data.0\gen_metrics0.0.2.0.0.oa.0.vtss
+5891 [5848] INFO perfrun.gpu <> - Data collection thread finished, shutting down the session
+5891 [5848] INFO perfrun.sdk <> - runCmd: "C:\Program Files (x86)\Intel\oneAPI\vtune\2024.2\bin64\emon.exe" -stop
+5898 [5848] INFO perfrun.sdk <> - runCmd started PID 1044
+6281 [5848] INFO perfrun.emon <> - EMON collector successfully stopped.
+
+6281 [5848] INFO perfrun.emon <> - Waiting for main Emon process (21200) to finish...
+6391 [5848] INFO perfrun.emon <> - Main Emon process finished
+6392 [5848] INFO perfrun.sdk <> - De-allocating TMU: C:\CS683\PA_Assignemnt1\pa1-chak-de-microarchitecture-advanced_architects\part1\transpose\r007ps\data.0\systemcollector-20704-LAPTOP-9PGAITT6.sc
+6403 [5848] INFO perfrun.system <> - closed the system trace file: C:\CS683\PA_Assignemnt1\pa1-chak-de-microarchitecture-advanced_architects\part1\transpose\r007ps\data.0\systemcollector-20704-LAPTOP-9PGAITT6.sc
+6404 [7208] INFO perfrun.launcher <> - Launcher: all plugins were stopped.
+6404 [7208] INFO perfrun.launcher <> - DeadlineTimer is going to be destroyed
+6404 [7208] INFO perfrun.launcher <> - DeadlineTimer was destroyed
+6404 [7208] INFO perfrun.launcher <> - DirectoryMonitor object was destroyed
+6404 [7208] WARN perfrun.launcher <> - Stop command is ignored because it is received when collection is already stopped, at file: vcs\perfrun1\launcher\src\command_handler.cpp:226
+6408 [7208] INFO perfrun.launcher <> - Application exit code: 0
+6408 [7208] INFO perfrun.launcher <> - Exit code: 0

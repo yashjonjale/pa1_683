@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo wrmsr -a 0x1a4 0x0
+
