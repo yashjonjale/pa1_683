@@ -61,18 +61,13 @@ void prefetchMatrixTranspose(double *matrix, double *transpose, int size) {
             if(j+1<size)_mm_prefetch(reinterpret_cast<const char*>(&transpose[(j+1)*size+i]), _MM_HINT_T2);
             transpose[j * size + i] = matrix[i * size + j];
             if((i*size+j)%cache_line_size==0){
-                    _mm_prefetch(reinterpret_cast<const char*>(&matrix[i*size+j+cache_line_size*1*prefetch_distance]), _MM_HINT_T0);
-                    //_mm_prefetch(reinterpret_cast<const char*>(&transpose[j*size+i+cache_line_size*1*prefetch_distance]), _MM_HINT_T0);
+                    _mm_prefetch(reinterpret_cast<const char*>(&matrix[i*size+j+cache_line_size*1*prefetch_distance]), _MM_HINT_T0);//prefetching for L1 Cache at a smaller prefetch distance
                 for(int k=1;k<prefetch_degree+1;k++){
                     _mm_prefetch(reinterpret_cast<const char*>(&matrix[i*size+j+cache_line_size*k*prefetch_distance_2]), _MM_HINT_T1);//prefetching for L2/L3 only so that we can retain it for longer time
-                    //_mm_prefetch(reinterpret_cast<const char*>(&transpose[j*size+i+cache_line_size*k*prefetch_distance_2]), _MM_HINT_T1);//prefetching for L2/L3 only so that we can retain it for longer time
                     _mm_prefetch(reinterpret_cast<const char*>(&matrix[i*size+j+cache_line_size*k*prefetch_distance_3]), _MM_HINT_T2);//prefetching for L2/L3 only so that we can retain it for longer time
-                    //_mm_prefetch(reinterpret_cast<const char*>(&transpose[j*size+i+cache_line_size*k*prefetch_distance_3]), _MM_HINT_T2);//prefetching for L2/L3 only so that we can retain it for longer time
                 }
-                // _mm_prefetch(reinterpret_cast<const char*>(&matrix[i*size+j+cache_line_size*prefetch_distance]), _MM_HINT_T0);
 
             }
-            // if(j+2<size)_mm_prefetch(reinterpret_cast<const char*>(&transpose[(j+2)*size+i]), _MM_HINT_T1);
         }
     }
 }
@@ -96,15 +91,10 @@ void tiledPrefetchedMatrixTranspose(double *matrix, double *transpose, int size,
                     transpose[(j*blockSize+v)*size+(i*blockSize+u)]=matrix[(i*blockSize+u)*size+(j*blockSize+v)];
                     if((u*size+j)%cache_line_size==0){
                         _mm_prefetch(reinterpret_cast<const char*>(&matrix[(i*blockSize+u)*size+(j*blockSize+v)+cache_line_size*1*prefetch_distance]), _MM_HINT_T0);
-                        //_mm_prefetch(reinterpret_cast<const char*>(&transpose[(j*blockSize+v)*size+(i*blockSize+u)+cache_line_size*1*prefetch_distance]), _MM_HINT_T0);
                         for(int k=1;k<prefetch_degree+1;k++){
                             _mm_prefetch(reinterpret_cast<const char*>(&matrix[(i*blockSize+u)*size+(j*blockSize+v)+cache_line_size*k*prefetch_distance_2]), _MM_HINT_T2);//prefetching for L2/L3 only so that we can retain it for longer time
-                            //_mm_prefetch(reinterpret_cast<const char*>(&transpose[(j*blockSize+v)*size+(i*blockSize+u)+cache_line_size*k*prefetch_distance_2]), _MM_HINT_T1);//prefetching for L2/L3 only so that we can retain it for longer time
                             _mm_prefetch(reinterpret_cast<const char*>(&matrix[(i*blockSize+u)*size+(j*blockSize+v)+cache_line_size*k*prefetch_distance_3]), _MM_HINT_T2);//prefetching for L2/L3 only so that we can retain it for longer time
-                           // _mm_prefetch(reinterpret_cast<const char*>(&transpose[(j*blockSize+v)*size+(i*blockSize+u)+cache_line_size*k*prefetch_distance_3]), _MM_HINT_T2);//prefetching for L2/L3 only so that we can retain it for longer time
                         }
-                        // _mm_prefetch(reinterpret_cast<const char*>(&matrix[i*size+j+cache_line_size*prefetch_distance]), _MM_HINT_T0);
-                        // _mm_prefetch(reinterpret_cast<const char*>(&transpose[j*size+i+cache_line_size*prefetch_distance]), _MM_HINT_T0);
                     }
                 }
             }
@@ -121,7 +111,7 @@ double naive(double * matrix, double *transpose, int size) {
 
     clock_t end = clock();
     double time_taken = ((double)(end - start)) / CLOCKS_PER_SEC;
-    printf("Time taken by naive matrix transpose: %f seconds\n", time_taken);
+    // printf("Time taken by naive matrix transpose: %f seconds\n", time_taken);
 
     return time_taken;
 }
@@ -134,7 +124,7 @@ double tiled(double * matrix, double *transpose, int size, int blockSize) {
     tiledMatrixTranspose(matrix, transpose, size, blockSize);
     clock_t end = clock();
     double time_taken = ((double)(end - start)) / CLOCKS_PER_SEC;
-    printf("Time taken by tiled matrix transpose: %f seconds\n", time_taken);
+    // printf("Time taken by tiled matrix transpose: %f seconds\n", time_taken);
 
     return time_taken;
 }
@@ -146,7 +136,7 @@ double prefetched(double * matrix, double *transpose, int size) {
     prefetchMatrixTranspose(matrix, transpose, size);
     clock_t end = clock();
     double time_taken = ((double)(end - start)) / CLOCKS_PER_SEC;
-    printf("Time taken by prefetch matrix transpose: %f seconds\n", time_taken);
+    // printf("Time taken by prefetch matrix transpose: %f seconds\n", time_taken);
 
     return time_taken;
 }
@@ -158,7 +148,7 @@ double tiled_prefetched(double * matrix, double *transpose, int size, int tileSi
     tiledPrefetchedMatrixTranspose(matrix, transpose, size, tileSize);
     clock_t end = clock();
     double time_taken = ((double)(end - start)) / CLOCKS_PER_SEC;
-    printf("Time taken by tiled prefetch matrix transpose: %f seconds\n", time_taken);
+    // printf("Time taken by tiled prefetch matrix transpose: %f seconds\n", time_taken);
 
     return time_taken;
 }
@@ -211,7 +201,8 @@ int main(int argc, char *argv[]) {
 
 
 #ifdef NAIVE
-    naive(matrix, transpose, size);
+    double naive_time1 = naive(matrix, naive_transpose, size);
+    //naive(matrix, transpose, size);
 
 #endif
 
@@ -221,7 +212,6 @@ int main(int argc, char *argv[]) {
     initializeResultMatrix(optimized_transpose, size);    
     
     double tiled_time1 = tiled(matrix, optimized_transpose, size, blockSize);
-    // double naive_time1 = naive(matrix, naive_transpose, size);
 
     // verify_correctness(naive_transpose, optimized_transpose, size);
 
